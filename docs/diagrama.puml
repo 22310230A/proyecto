@@ -1,0 +1,66 @@
+@startuml
+class Juego {
+    + Jugar()
+}
+
+class Nivel {
+    + Selecciona_nivel()
+}
+
+class Escenario {
+    + Mostrar()
+}
+
+class Puntuacion {
+    + Mostrar()
+}
+
+class Vida {
+    + Mostrar()
+}
+
+class Plataforma {
+    + Arriba()
+}
+
+class Puerta {
+    + Nivel_completo()
+}
+
+class Boton {
+    + Activa_puerta()
+}
+
+class Acido {
+    + Elimina()
+}
+
+class Personaje {
+    + saltar()
+    + Moverizq()
+    + Moverder()
+}
+
+class Palanca {
+    + Activa_plataforma()
+}
+
+class Diamante {
+    + Aplica_vida()
+}
+
+Juego *-- Nivel
+Nivel *-- Escenario
+Nivel *-- Puntuacion
+Escenario *-- Plataforma
+Escenario *-- Puerta
+Escenario *-- Acido
+Escenario o-- Personaje
+Personaje --o Palanca
+Personaje --o Boton
+Personaje --o Diamante
+Vida --o Personaje
+Diamante --|> Vida
+Plataforma --o Palanca
+Puerta --o Boton
+@enduml
