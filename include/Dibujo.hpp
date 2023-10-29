@@ -16,7 +16,7 @@ private:
 public:
     Dibujo(int x, int y,string recurso){
         this->recurso = recurso;
-        archivo.open("./data/"+ this->recurso +"frog.txt");
+        archivo.open("./data/"+ this->recurso +"fireboy.txt");
         this->x=x;
         this->y=y;
 
